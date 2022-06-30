@@ -1,5 +1,5 @@
 #include "schMain.h"
-#include "schFirebase.h"
+#include "schFirebase.hpp"
 
 #include <Arduino.h>
 #include <WiFi.h>

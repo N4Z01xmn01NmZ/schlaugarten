@@ -5,10 +5,9 @@
 #define WIFI_SSID     "AndroidAP"
 #define WIFI_PASSWORD "uwyi7059"
 
-#define API_KEY       "API_KEY"
-#define FIREBASE_PID  "PROJECT_ID"
-#define USER_EMAIL    "USER_EMAIL"
-#define USER_PASSWORD "USER_PASSWORD"
+#define API_KEY       "AIzaSyBFgFu_Tz3p612pvtsxZ7yPZJqSpKZpyfI"
+#define DATABASE_URL  "https://mapps-74ae7-default-rtdb.firebaseio.com/"
+#define FIREBASE_PID  "mapps-74ae7"
 
 #define VALVE_PIN    13
 #define FLOWRATE_PIN 27
