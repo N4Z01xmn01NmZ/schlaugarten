@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_bg"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/btnMenu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="8dp"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ToggleButton
+        android:id="@+id/manual_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:srcCompat="@drawable/ic_plus_solid" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Water Valve Activation"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/manual_switch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Smart Garden App"
+        android:textColor="@color/colorWhite"
+        android:textSize="30dp"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalIntake">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                style="@style/DividerHorizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayout2" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/op50ml"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/op100ml"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/op100ml"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:indeterminateOnly="false"
+                        android:progressDrawable="@drawable/circle"
+                        tools:progress="60"
+                        android:rotation="-90"/>
+
+                <TextView
+                    android:id="@+id/nilai1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
+                    app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+                    app:layout_constraintStart_toStartOf="@+id/progress_bar"
+                    app:layout_constraintTop_toTopOf="@+id/progress_bar"
+                    tools:text="60%"
+                    android:textSize="14dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/progress_bar"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/op100ml"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Kelembaban tanah"
+                    android:textSize="12dp"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+
+                <View
+                    style="@style/DividerVertical"
+                    app:layout_constraintStart_toEndOf="@id/op50ml"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <View
+                    style="@style/DividerVertical"
+                    app:layout_constraintStart_toEndOf="@id/op100ml"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/op100ml"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/op150ml"
+                    app:layout_constraintStart_toEndOf="@+id/op50ml"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/plant">
+                    </ImageView>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/op150ml"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/op100ml"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/op100ml"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:indeterminateOnly="false"
+                    android:progressDrawable="@drawable/circle"
+                    tools:progress="60"
+                    android:rotation="-90">
+                </ProgressBar>
+                <TextView
+                    android:id="@+id/nilai2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintBottom_toBottomOf="@+id/progress_bar2"
+                    app:layout_constraintEnd_toEndOf="@+id/progress_bar2"
+                    app:layout_constraintStart_toStartOf="@+id/progress_bar2"
+                    app:layout_constraintTop_toTopOf="@+id/progress_bar2"
+                    tools:text="Satuan"
+                    android:textSize="11dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Takaran air"
+                    android:textSize="12dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/op100ml"
+                    app:layout_constraintTop_toBottomOf="@id/progress_bar2">
+                </TextView>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                <View
+                    style="@style/DividerVertical"
+                    app:layout_constraintStart_toEndOf="@id/op200ml"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <View
+                    style="@style/DividerVertical"
+                    app:layout_constraintStart_toEndOf="@id/op250ml"
+                    app:layout_constraintTop_toBottomOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/op200ml"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/op250ml"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/led_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumb="@drawable/switch_thumb"
+                        app:track="@drawable/switch_track"
+                        app:showText="true"
+                        android:textOn="On"
+                        android:textOff="Off"
+                        android:textColor="@color/black">
+                    </androidx.appcompat.widget.SwitchCompat>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lampu"
+                        android:textColor="@color/black">
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/op250ml"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/opCustom"
+                    app:layout_constraintStart_toEndOf="@+id/op200ml"
+                    app:layout_constraintTop_toTopOf="parent">
+                </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/opCustom"
+                        app:layout_constraintStart_toEndOf="@+id/op200ml"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:indeterminateOnly="false"
+                        android:progressDrawable="@drawable/circle"
+                        tools:progress="60"
+                        android:rotation="-90">
+                    </ProgressBar>
+
+                    <TextView
+                        android:id="@+id/nilai3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        app:layout_constraintBottom_toBottomOf="@+id/progress_bar3"
+                        app:layout_constraintEnd_toEndOf="@+id/progress_bar3"
+                        app:layout_constraintStart_toStartOf="@+id/progress_bar3"
+                        app:layout_constraintTop_toTopOf="@+id/progress_bar3"
+                        tools:text="°C"
+                        android:textSize="14dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Temprature"
+                        android:textSize="12dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/opCustom"
+                        app:layout_constraintStart_toEndOf="@+id/op200ml"
+                        app:layout_constraintTop_toBottomOf="@id/progress_bar3">
+                    </TextView>
+
+                <LinearLayout
+                    android:id="@+id/opCustom"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/op250ml"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/water_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumb="@drawable/switch_thumb"
+                        app:track="@drawable/switch_track"
+                        app:showText="true"
+                        android:textOn="On"
+                        android:textOff="Off"
+                        android:textColor="@color/black">
+                    </androidx.appcompat.widget.SwitchCompat>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Auto"
+                        android:textColor="@color/black">
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/NIM1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Fernando Sutanto - 2440066903"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/tvTotalIntake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Julianto Leeman - 2440066903"
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/NIM1"
+        app:layout_constraintStart_toStartOf="@id/NIM1"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
