@@ -35,13 +35,15 @@ namespace sch {
 
         FirebaseUpdateDB([=](void) {
             FirebaseWriteBool("device/auto", false);
-            FirebaseWriteBool("device/lamp", false);
+            FirebaseWriteBool("device/lamp", true);
+            FirebaseWriteBool("device/valve", false);
 
             FirebaseWriteInt("device/mode", 0);
-            FirebaseWriteInt("device/water", 0);
+            FirebaseWriteInt("device/water/flowrateMillis", 0);
+            FirebaseWriteInt("device/water/totalMillis", 0);
 
-            FirebaseWriteFloat("device/soil", 0);
-            FirebaseWriteFloat("device/temp", 0);
+            FirebaseWriteFloat("device/soilIsDry", 0);
+            FirebaseWriteFloat("device/temperature", 0);
         });
 
         Serial.println("Firebase initialization complete...");

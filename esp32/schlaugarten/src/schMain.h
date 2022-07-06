@@ -9,9 +9,12 @@
 #define DATABASE_URL  "https://mapps-74ae7-default-rtdb.firebaseio.com/"
 #define FIREBASE_PID  "mapps-74ae7"
 
-#define VALVE_PIN    13
-#define FLOWRATE_PIN 27
-#define SOIL_PIN     36
-#define TEMP_PIN     4
+#define SOIL_PIN     34
+#define FLOWRATE_PIN 35
+#define TEMP_PIN     32
+#define VALVE_PIN    33
+
+#define FLOW_PULSE_INTERVAL 1000
+#define FLOW_CALIB_FACTOR   4.5
 
 #endif /* SCH_MAIN_H */
